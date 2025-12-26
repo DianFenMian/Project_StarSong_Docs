@@ -43,7 +43,7 @@ const vitePressOptions = {
     // 页脚配置
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: 'Copyright © 2024 星歌计划'
+      copyright: 'Copyright © 2026 DianFenMian'
     },
     
     // 编辑页面链接
@@ -110,7 +110,8 @@ const vitePressOptions = {
 
 const vitePressSidebarOptions = {
   // VitePress Sidebar's options here...
-  documentRootPath: '/',
+  documentRootPath: 'pages/docs',
+  useTitleFromFileHeading: true,
   collapsed: false,
   capitalizeFirst: true
 };
