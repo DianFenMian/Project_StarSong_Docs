@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
+import { withSidebar } from 'vitepress-sidebar';
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+const vitePressOptions = {
   title: "星歌计划 - 文档站",
   description: "游玩手册 / 插件指南 / 命令帮助",
   srcDir: 'pages',
@@ -35,30 +35,6 @@ export default defineConfig({
       }
     ],
 
-    // 侧边栏配置
-    sidebar: [
-      {
-        text: '🎮 快速开始',
-        collapsed: false,
-        items: [
-          { text: '加入服务器', link: '/docs/join' },
-          { text: '服务器规则', link: '/docs/rules' },
-          { text: '常见问题', link: '/docs/faq' }
-        ]
-      },
-      {
-        text: '📚 服务器文档',
-        collapsed: false,
-        items: [
-          { text: '更新日志', link: '/docs/version' },
-          { text: '指令说明', link: '/docs/commands' },
-          { text: '插件介绍', link: '/docs/plugins' },
-          { text: '游戏守则', link: '/docs/rules' },
-          { text: '图像守则', link: '/docs/pic_rules' }
-        ]
-      }
-    ],
-
     // 社交链接
     socialLinks: [
       { icon: 'github', link: 'https://github.com/DianFenMian/cdn_starsong_docs' }
@@ -67,7 +43,7 @@ export default defineConfig({
     // 页脚配置
     footer: {
       message: '基于 MIT 许可发布',
-      copyright: 'Copyright © 2024 星歌计划'
+      copyright: 'Copyright © 2026 DianFenMian'
     },
     
     // 编辑页面链接
@@ -130,4 +106,15 @@ export default defineConfig({
       }
     }
   }
-})
+};
+
+const vitePressSidebarOptions = {
+  // VitePress Sidebar's options here...
+  documentRootPath: 'pages/docs',
+  useTitleFromFileHeading: true,
+  collapsed: false,
+  capitalizeFirst: true
+};
+
+// https://vitepress.dev/reference/site-config
+export default defineConfig(withSidebar(vitePressOptions, vitePressSidebarOptions));
