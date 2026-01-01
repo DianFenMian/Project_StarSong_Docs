@@ -110,7 +110,7 @@ const vitePressOptions = {
 
 const vitePressSidebarOptions = {
   // VitePress Sidebar's options here...
-  documentRootPath: 'pages/docs',
+  documentRootPath: 'pages',
   useTitleFromFileHeading: true,
   collapsed: false,
   capitalizeFirst: true
